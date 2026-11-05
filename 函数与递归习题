@@ -16,7 +16,7 @@ int main()
     scanf("%d%d",&l,&r);
     for(i=l;i<=r;i++)
     {
-        ans += count(i);
+        ans+= count(i);
     }
     printf("%d\n",ans);
     return 0;
@@ -29,8 +29,8 @@ int fun(int x)
     int sum=0;
     while(x)
     {
-        sum += x%10;
-        x /=10;
+        sum+= x%10;
+        x/=10;
     }
     return sum;
 }
@@ -58,8 +58,8 @@ int isHuiwen(int x)
     int t=x,rev=0;
     while(t)
     {
-        rev = rev*10 + t%10;
-        t /=10;
+        rev=rev*10+t%10;
+        t/=10;
     }
     return rev==x;
 }
@@ -80,7 +80,7 @@ int check(int x)
 {
     while(x)
     {
-        if(x%10==5) return 1;
+        if(x%10==5)return 1;
         x /= 10;
     }
     return 0;
@@ -100,9 +100,9 @@ E 233
 #include <stdio.h>
 int f(int n)
 {
-    if(n==1) return 2;
-    if(n==2) return 3;
-    if(n==3) return 3;
+    if(n==1)return 2;
+    if(n==2)return 3;
+    if(n==3)return 3;
     return f(n-1)+f(n-2);
 }
 int main()
