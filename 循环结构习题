@@ -1,0 +1,87 @@
+1001 上下金字塔
+#include <stdio.h>
+int main()
+{
+    int n,i,j;
+    scanf("%d",&n);
+    //上
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n-i;j++) printf(" ");
+        for(j=1;j<=2*i-1;j++) printf("*");
+        printf("\n");
+    }
+    //下
+    for(i=n-1;i>=1;i--)
+    {
+        for(j=1;j<=n-i;j++) printf(" ");
+        for(j=1;j<=2*i-1;j++) printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+
+1002 数字三角形
+#include <stdio.h>
+int main()
+{
+    int n,i,j;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%d ",j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+1003 字符金字塔
+#include <stdio.h>
+int main()
+{
+    int n,i,j;
+    char ch;
+    scanf("%d %c",&n,&ch);
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n-i;j++) printf(" ");
+        for(j=1;j<=2*i-1;j++) printf("%c",ch);
+        printf("\n");
+    }
+    return 0;
+}
+
+1004 涂小天与他的画
+#include <stdio.h>
+int main()
+{
+    int n,i;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        printf("*\n");
+    }
+    return 0;
+}
+
+1005 箭形图案
+#include <stdio.h>
+int main()
+{
+    int n,i,j;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=i;j++) printf("*");
+        printf("\n");
+    }
+    for(i=n-1;i>=1;i--)
+    {
+        for(j=1;j<=i;j++) printf("*");
+        printf("\n");
+    }
+    return 0;
+}
